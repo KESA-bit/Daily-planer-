@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6f5ed">
+
+  <title>Weekly Discipline Tracker</title>
+
+  <style>
+    :root {
+      --green: #214d39;
+      --light-green: #e8efe4;
+      --cream: #f8f6ee;
+      --text: #24382e;
+      --muted: #68766b;
+      --border: #d8e0d4;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    main {
+      width: min(100% - 28px, 680px);
+      margin: 32px auto;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 24px 12px;
+    }
+
+    .logo {
+      display: inline-grid;
+      place-items: center;
+      width: 54px;
+      height: 54px;
+      background: var(--green);
+      color: white;
+      border-radius: 17px;
+      font-size: 28px;
+    }
+
+    h1 {
+      color: var(--green);
+      font-size: clamp(28px, 7vw, 42px);
+      line-height: 1.15;
+      margin: 16px 0 8px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .card {
+      background: #fffefa;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 12px 32px rgba(33, 77, 57, 0.06);
+    }
+
+    .product {
+      background: var(--light-green);
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      padding: 20px;
+    }
+
+    .product-icon {
+      font-size: 38px;
+    }
+
+    h2 {
+      margin: 8px 0;
+      font-size: 23px;
+    }
+
+    .description {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .features {
+      padding-left: 20px;
+      font-size: 14px;
+    }
+
+    .price {
+      font-size: 30px;
+      font-weight: bold;
+      color: var(--green);
+      margin: 16px 0 4px;
+    }
+
+    .price-note {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .field {
+      margin-top: 22px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    input[type="tel"] {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #cbd7ca;
+      border-radius: 12px;
+      font-size: 16px;
+      background: white;
+      color: var(--text);
+    }
+
+    input:focus {
+      outline: 2px solid var(--green);
+      outline-offset: 2px;
+    }
+
+    .hint {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .error {
+      color: #b42318;
+      font-size: 13px;
+    }
+
+    button {
+      width: 100%;
+      padding: 16px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 13px;
+      background: var(--green);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #173c2b;
+    }
+
+    .notice {
+      background: #f4f3e9;
+      border-radius: 12px;
+      padding: 14px;
+      margin-top: 18px;
+      color: #59665b;
+      font-size: 12px;
+    }
+
+    .quote {
+      text-align: center;
+      margin-top: 22px;
+      padding: 18px;
+      border-left: 3px solid var(--green);
+      background: #f3f1e6;
+      font-style: italic;
+      border-radius: 5px 13px 13px 5px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      margin: 20px 0;
+    }
+
+    @media (max-width: 480px) {
+      main {
+        margin: 12px auto;
+      }
+
+      .card {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+
+    <header class="hero">
+      <div class="logo">✓</div>
+      <h1>Weekly Discipline Tracker</h1>
+      <p class="subtitle">
+        Small Steps. Strong Habits. Better You.
+      </p>
+    </header>
+
+    <section class="card">
+
+      <div class="product">
+        <div class="product-icon">🎯</div>
+
+        <h2>Build Your Discipline</h2>
+
+        <p class="description">
+          A reusable weekly habit tracker to help you
+          build consistency, organise your goals and
+          stay focused every week.
+        </p>
+
+        <ul class="features">
+          <li>Monday to Sunday habit tracker</li>
+          <li>Track your daily habits and goals</li>
+          <li>Weekly reflection and progress score</li>
+          <li>Motivational quotes section</li>
+          <li>Reusable A4 printable PDF</li>
+        </ul>
+
+        <div class="price">₹14.57</div>
+        <div class="price-note">
+          One-time payment · Digital PDF
+        </div>
+      </div>
+
+      <form id="order-form">
+
+        <div class="field">
+          <label for="phone">
+            WhatsApp Mobile Number
+          </label>
+
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            inputmode="numeric"
+            autocomplete="tel-national"
+            maxlength="10"
+            placeholder="Enter 10-digit mobile number"
+            pattern="[6-9][0-9]{9}"
+            required
+          >
+
+          <p class="hint">
+            Enter your Indian mobile number so the
+            seller can identify your order and send
+            the PDF through WhatsApp.
+          </p>
+
+          <p id="error" class="error" role="alert"></p>
+        </div>
+
+        <button type="submit">
+          Pay ₹14.57 via UPI
+        </button>
+
+      </form>
+
+      <div class="notice">
+        <strong>How it works:</strong>
+        Click the payment button and complete your
+        payment in your UPI app. The seller will
+        manually verify the payment and send your
+        PDF through WhatsApp. Payment verification
+        and PDF delivery are not automatic.
+      </div>
+
+      <div class="quote">
+        "Discipline today, freedom tomorrow."
+      </div>
+
+    </section>
+
+    <footer>
+      Digital product · No name required<br>
+      Please verify the payment details before paying.
+    </footer>
+
+  </main>
+
+  <script>
+    // IMPORTANT:
+    // Replace this placeholder with your real UPI ID.
+    const MERCHANT_UPI_ID = "YOUR_UPI_ID@BANK";
+
+    const MERCHANT_NAME = "Weekly Discipline Tracker";
+    const PRICE_INR = "14.57";
+
+    const form = document.getElementById("order-form");
+    const phoneInput = document.getElementById("phone");
+    const error = document.getElementById("error");
+
+    phoneInput.addEventListener("input", function () {
+      phoneInput.value = phoneInput.value
+        .replace(/\D/g, "")
+        .slice(0, 10);
+
+      error.textContent = "";
+    });
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const phone = phoneInput.value.trim();
+
+      if (!/^[6-9]\d{9}$/.test(phone)) {
+        error.textContent =
+          "Please enter a valid 10-digit Indian mobile number.";
+        phoneInput.focus();
+        return;
+      }
+
+      if (
+        MERCHANT_UPI_ID === "sandhyasreekumar360@oksbi" ||
+        !MERCHANT_UPI_ID.includes("@")
+      ) {
+        error.textContent =
+          "Payment setup is incomplete. Please try again later.";
+        return;
+      }
+
+      const note =
+        "Weekly Discipline Tracker | Phone: " + phone;
+
+      const params = new URLSearchParams({
+        pa: MERCHANT_UPI_ID,
+        pn: MERCHANT_NAME,
+        am: PRICE_INR,
+        cu: "INR",
+        tn: note
+      });
+
+      window.location.href =
+        "upi://pay?" + params.toString();
+    });
+  </script>
+
+</body>
+</html>
