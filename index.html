@@ -294,8 +294,7 @@
   </main>
 
   <script>
-    // IMPORTANT:
-    // Replace this placeholder with your real UPI ID.
+    // Your UPI ID
     const MERCHANT_UPI_ID = "sandhyasreekumar360@oksbi";
 
     const MERCHANT_NAME = "Weekly Discipline Tracker";
@@ -325,10 +324,7 @@
         return;
       }
 
-      if (
-        MERCHANT_UPI_ID === "sandhyasreekumar360@oksbi" ||
-        !MERCHANT_UPI_ID.includes("@")
-      ) {
+      if (!MERCHANT_UPI_ID.includes("@")) {
         error.textContent =
           "Payment setup is incomplete. Please try again later.";
         return;
